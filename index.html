@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Personajes Rick And Morty</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+	<div class="contenedor" id="contenedor">
+		<header class="header" id="header">
+			<nav class="navbar" id="navbar">
+				<a class="titulo" href="http://localhost:5500/?tab=1">Personajes Rick And Morty</a>
+				<form action="" class="formulario_buscar" id="formulario_buscar" autocomplete="off">
+					<input type="text" class="input" id="buscar_personaje" name="name" placeholder="Buscar Personaje">
+					<button class="btn" id="btn_buscar_personaje" type="button">Buscar</button>
+				</form>
+			</nav>
+		</header>
+		<section class="main" id="main">
+			<div class="botones_navegacion" id="botones_navegacion">
+				<button class="btn" id="btn_anterior">Anterior</button>
+				<div class="menu" id="menu_paginas">
+					<a href="./?tab=1" class="enlace" id="enlace_pagina_1">1</a>
+					<a href="./?tab=2" class="enlace" id="enlace_pagina_2">2</a>
+					<a href="./?tab=3" class="enlace" id="enlace_pagina_3">3</a>
+					<a href="./?tab=4" class="enlace" id="enlace_pagina_4">4</a>
+					<p id="pagina_actual">...</p>
+					<a href="./?tab=34" class="enlace" id="enlace_pagina_34">34</a>
+				</div>
+				<button class="btn" id="btn_siguiente">Siguiente</button>
+			</div>
+		</section>
+		<footer class="footer" id="footer">
+			<p class="copyright">Con <i class="fas fa-heart"></i> por Gloria Beltrán</p>
+		</footer>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<script src="https://kit.fontawesome.com/4060128349.js" crossorigin="anonymous"></script>
+	<script src="main.js"></script>
+</body>
+</html>

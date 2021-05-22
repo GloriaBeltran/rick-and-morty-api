@@ -1,0 +1,192 @@
+body {
+	background-color: #fdfdfd;
+	font-family: 'Roboto', sans-serif;
+}
+.contenedor {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(3, auto);
+	gap: 30px;
+}
+.contenedor .header {
+	background-color: #1e1e1e;
+	padding: 15px;
+}
+.contenedor .header .navbar {
+	width: 90%;
+	max-width: 940px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.contenedor .header .navbar .titulo {
+	color: #f0f0f0;
+	font-size: 2rem;
+	text-decoration: none;
+	font-weight: 600;
+	transition: all 200ms ease;
+	margin-bottom: 20px;
+	margin: 0;
+}
+.contenedor .header .navbar .titulo:hover {
+	color: #aaa;
+}
+.contenedor .header .navbar .formulario_buscar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 360px;
+}
+.contenedor .header .navbar .formulario_buscar .input {
+	outline: none;
+	height: 40px;
+	width: 250px;
+	border: 3px #0000 solid;
+	border-radius: 3px;
+	color: #111;
+	padding: 5px;
+	font-size: 1.2rem;
+	transition: all 300ms ease;
+}
+.contenedor .header .navbar .formulario_buscar .input:focus {
+	border: 3px #05a solid;
+}
+.contenedor .header .navbar .formulario_buscar .btn {
+	background-color: #05a;
+	width: 100px;
+	height: 40px;
+	border: none;
+	border-radius: 3px;
+	color: #fff;
+	font-size: 1.25rem;
+	transition: all 150ms ease;
+}
+.contenedor .header .navbar .formulario_buscar .btn:hover {
+	background-color: #06c;
+	cursor: pointer;
+}
+.contenedor .header .navbar .formulario_buscar .btn:active {
+	background-color: #08d;
+}
+.contenedor .main {
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	gap: 20px;
+	max-width: 940px;
+}
+.contenedor .main .botones_navegacion {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	grid-column: 1/-1;
+}
+.contenedor .main .botones_navegacion .btn {
+	background-color: #05a;
+	border: none;
+	border-radius: 3px;
+	height: 50px;
+	width: 300px;
+	color: #fff;
+	font-size: 1.25rem;
+	transition: all 150ms ease;
+}
+.contenedor .main .botones_navegacion .btn:hover {
+	background-color: #06c;
+	cursor: pointer;
+}
+.contenedor .main .botones_navegacion .btn:active {
+	background-color: #08d;
+}
+.contenedor .main .botones_navegacion .menu .enlace{
+	color: #444;
+	font-weight: 500;
+	background-color: #fff;
+	text-decoration: none;
+	min-width: 30px;
+	min-height: 30px;
+	border-radius: 50%;
+	padding: 5px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 200ms ease;
+}
+.contenedor .main .botones_navegacion .menu .enlace:hover {
+	color: #000;
+}
+.contenedor .main .botones_navegacion .menu .enlace:active {
+	background-color: #06c;
+	color: #fff;
+}
+.contenedor .main .botones_navegacion .menu .pagina_actual {
+	background-color: #07c;
+	color: #fff;
+}
+.contenedor .main .botones_navegacion .menu #pagina_actual {
+	display: inline;
+}
+.contenedor .main .personaje .imagen {
+	height: auto;
+	width: 100%;
+	border-radius: 10px;
+}
+.contenedor .main .personaje .especie {
+	font-size: 1.4rem;
+}
+.contenedor .main .personaje .estado .icono-vivo {
+	color: #0c0;
+	font-size: 1rem;
+}
+.contenedor .main .personaje .estado .icono-muerto {
+	color: #d00;
+	font-size: 1rem;
+}
+.contenedor .footer {
+	background-color: #1e1e1e;
+	height: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #f0f0f0;
+	font-size: 1.25rem;
+}
+@media screen and (max-width: 1000px) {
+	.contenedor .main {
+		grid-template-columns: 1fr 1fr;
+		gap: 70px;
+	}
+	.contenedor .main .botones_navegacion .menu {
+		display: none;
+	}
+}
+@media screen and (max-width: 680px) {
+	.contenedor .main {
+		grid-template-columns: 1fr;
+		gap: 20px;
+	}
+	.contenedor .main .botones_navegacion {
+		flex-direction: column;
+		height: 110px;
+	}
+}
+@media screen and (max-width: 870px){
+	.contenedor .header .navbar {
+		flex-direction: column;
+	}
+}
+@media screen and (max-width: 464px) {
+	.contenedor .header .navbar .titulo {
+		font-size: 6.5vw;
+	}
+	.contenedor .header .navbar .formulario_buscar {
+		width: 93.7%;
+	}
+	.contenedor .header .navbar .formulario_buscar .input {
+		width: 74%;
+	}
+	.contenedor .header .navbar .formulario_buscar .btn {
+		width: 23%;
+	}
+}
